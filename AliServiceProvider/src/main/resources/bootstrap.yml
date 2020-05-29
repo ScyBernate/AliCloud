@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: service-provider
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        prefix: service-provider
+        group: scy-group
+        namespace: b0a1ebd0-defd-4ab4-b282-1672ff6a8903
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: b0a1ebd0-defd-4ab4-b282-1672ff6a8903
+
+## 对外暴露服务信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+

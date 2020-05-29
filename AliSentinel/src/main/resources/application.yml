@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: sentinel-datasource-nacos
+  cloud:
+    sentinel:
+      transport:
+        port: 8001
+        ##sentinel dashboard
+        dashboard: localhost:8002
+      datasource:
+        ## nacos地址
+        ds:
+          nacos:
+            server-addr: localhost:8848
+            namespace: b0a1ebd0-defd-4ab4-b282-1672ff6a8903
+            dataId: ${spring.application.name}
+            groupId: DEFAULT_GROUP
+            rule-type: flow
+            data-type: json
+server:
+  port: 8003
