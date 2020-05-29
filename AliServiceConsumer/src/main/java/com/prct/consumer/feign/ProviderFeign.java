@@ -10,6 +10,11 @@ public interface ProviderFeign {
     @RequestMapping("/getUserName")
     public String getProviderUserName();
 
+
+    /**
+     * 测试熔断
+     * @return
+     */
     @RequestMapping("/testff")
     public String testff();
 
